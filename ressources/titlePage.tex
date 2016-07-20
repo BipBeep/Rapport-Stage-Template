@@ -1,0 +1,91 @@
+\documentclass[12pt,a4paper]{report}
+%% WARNING :
+%% If you want to compile only this file, uncomment the following "usepackage" lines.
+%% If you use the same package in main.tex you should comment the corresponding
+%% lines here.
+%\usepackage{graphicx}
+%\usepackage[a4paper,
+%            left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+%\usepackage[most]{tcolorbox}
+
+\newcommand{\logoPath}{example-image-1x1}                   % Source for the logo
+\newcommand{\scaleLogo}{0.3}                                % Scale for the logo
+\newcommand{\translationLogo}{2cm}                          % Translation applied to the logo (can be set to 0cm)
+\newcommand{\organizationName}{internship organization name}% Name of the organization
+\newcommand{\organizationAdress}{address}                   % Adresse of the organization
+\newcommand{\internshipTitle}{Internship Title}             % Title of the internship
+\newcommand{\authorName}{author name}                       % Name of the author
+\newcommand{\classYear}{1st or 2nd}                         % Class year
+\newcommand{\specialization}{ISI, IF, ISSC, SLE, MMIS}      % Specialization
+\newcommand{\startDate}{start date}                         % Start date of the internship
+\newcommand{\varendDate}{end date}                          % End date of the internship
+\newcommand{\duration}{duration}                            % Duration of the internship
+\newcommand{\internshipSupervisor}{Supervisor name}         % Supervisor name
+\newcommand{\reviewerName}{Teacher name}                    % Teacher name
+
+% If you find the grey box ugly (which I do) set its value to 0
+\newcommand{\grayIntensity}{25}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \begin{figure}[htp]
+      \centering
+      \hspace{\translationLogo}
+      \includegraphics[scale=\scaleLogo]{\logoPath}
+      \hfill
+      \includegraphics[scale=0.2]{images/logoEnsimag.png}
+    \end{figure}
+    
+	\par\vspace{1cm}
+	
+	{\LARGE Grenoble INP - Ensimag\par}
+	{\normalsize\'Ecole nationale sup\'erieure d'informatique et de math\'ematiques appliqu\'ees\par}
+	
+	\vspace{1.5cm}
+	
+	{\LARGE2\textsuperscript{nd} year internship report\par}
+	
+	\vspace{1.5cm}
+	
+	{\large\organizationName\par}
+	
+	\vspace{1.5cm}
+	
+	{\huge\bfseries\colorbox{gray!\grayIntensity}{\internshipTitle}\par}
+	
+	\vspace{2cm}
+	
+	{\large\authorName\par}
+	
+	\vspace{0.5cm}
+	
+	{\large\classYear\ - Specialization \specialization\par}
+	
+	\vspace{1cm}
+	
+	{\normalsize From \startDate\ to \varendDate\ (\duration)\par}
+	
+    \vfill
+    
+    \begin{minipage}[t]{7cm}
+        \flushleft
+        \footnotesize\organizationName
+        
+        \organizationAdress
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{7cm}
+        \flushright
+        \footnotesize Internship supervisor
+        
+        \internshipSupervisor
+        
+        \vspace{0.5cm}
+        Ensimag Reviewer
+        
+        \reviewerName
+    \end{minipage}
+
+\end{titlepage}
+\end{document}
